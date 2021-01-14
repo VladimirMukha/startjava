@@ -1,6 +1,7 @@
 public class Variable {
 
-     public static void main(String[] args){
+     
+public static void main(String[] args){
      int  cores = 6;
      double  hertz =  3.4;
      byte  streams = 12;
