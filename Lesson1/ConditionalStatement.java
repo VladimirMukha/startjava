@@ -1,32 +1,31 @@
- public class ConditionalStatement{
+public class ConditionalStatement{ 
 
-    public static void main(String[] args) {
-
-
+     public static void main(String[] args) {
+       
         int age = 18;
         if (age > 20) {
-            System.out.println("РЈР¶Рµ РІР·СЂРѕСЃР»С‹Р№ ");
+            System.out.println("Уже взрослый ");
         }
         boolean male = true;
         if (male) {
-            System.out.println("РњСѓР¶С‡РёРЅР°");
+            System.out.println("Мужчина");
         }
         if (!male) {
-            System.out.println("Р–РµРЅС‰РёРЅР°");
+            System.out.println("Женщина");
         }
         double height = 1.70;
         if (height < 1.80) {
-            System.out.println("РџСЂРёРіРѕРґРµРЅ РґР»СЏ СЃР»СѓР¶Р±С‹ РІ С‚Р°РЅРєРѕРІС‹С…");
+            System.out.println("Пригоден для службы в    танковых");
         } else {
-            System.out.println("РќРµ РїСЂРёРіРѕРґРµРЅ");
+            System.out.println("Не пригоден");
         }
         char firstLetterOfName = 'M';
         if (firstLetterOfName == 'M') {
-            System.out.println("РњР°РєСЃРёРј");
+            System.out.println("Максим");
         } else if (firstLetterOfName == 'I') {
-            System.out.println("РќРµ РњР°РєСЃРёРј");
+            System.out.println("Не Максим");
         } else {
-            System.out.println("РљС‚Рѕ-С‚Рѕ РµС‰Рµ");
+            System.out.println("Кто-то еще");
         }
     }
  }
