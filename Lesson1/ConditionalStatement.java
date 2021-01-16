@@ -8,7 +8,7 @@ public class ConditionalStatement {
         boolean male = true;
         if (male) {
             System.out.println("Мужчина");
-        }else if (!male) {
+        } else if (!male) {
             System.out.println("Женщина");
         }
 
