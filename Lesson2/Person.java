@@ -5,19 +5,18 @@ public class Person {
     public int weight = 60;
     public int age = 39;
 
-    public void go() {
+    void go() {
     }
 
-    public void sit() {
+    void sit() {
     }
 
-    public void run() {
+    void run() {
     }
 
-    public void say() {
+    void say() {
     }
 
-    public void learningJava() {
+    void learnJava() {
     }
-
 }
