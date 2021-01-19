@@ -7,7 +7,7 @@ public class WolfTest {
         wolf.age = 7;
         wolf.color = "Grey";
 
-        System.out.println("1 : "+ wolf.sex + " Кличка: " + wolf.nickName + " вес: " + " " + wolf.weight + " возраст: " + wolf.age + " цвет :" + wolf.color);
+        System.out.println("1 : " + wolf.sex + " Кличка: " + wolf.nickName + " вес: " + " " + wolf.weight + " возраст: " + wolf.age + " цвет :" + wolf.color);
 
         wolf.go();
 
