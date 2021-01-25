@@ -44,7 +44,7 @@ public class Wolf {
         return color;
     }
 
-       public void setColor(String color) {
+    public void setColor(String color) {
         this.color = color;
     }
     
