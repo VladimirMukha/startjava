@@ -14,7 +14,7 @@ public class CalculatorTest {
             System.out.print("Введите второе число: ");
             int b = sc.nextInt();
             calculator.calculate(a,sign,b);
-            System.out.println("Хотите продолжить [да/нет]");
+            System.out.println("Хотите продолжить вычисления? [да/нет]");
             answer = sc.next();
             if (answer.equals("да")) {
                 continue;
