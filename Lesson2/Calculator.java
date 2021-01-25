@@ -20,7 +20,7 @@ public class Calculator {
                 for (int i = 0; i < b; i++) {
                     exponentiation *= a;
                 }
-                System.out.println(tmp);
+                System.out.println(exponentiation);
                 break;
             case '%':
                 result = a % b;
