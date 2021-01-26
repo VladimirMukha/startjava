@@ -16,15 +16,14 @@ public class Calculator {
                 System.out.println(a / b);
                 break;
             case '^':
-                double exponentiation = 1;
+                double exp = 1;
                 for (int i = 0; i < b; i++) {
-                    exponentiation *= a;
+                    exp *= a;
                 }
-                System.out.println(exponentiation);
+                System.out.println(exp);
                 break;
             case '%':
-                result = a % b;
-                System.out.println(result);
+                System.out.println(a % b);
                 break;
         }
     }
