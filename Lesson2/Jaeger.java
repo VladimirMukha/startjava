@@ -27,7 +27,6 @@ public class Jaeger {
         this.height = height;
     }
 
-
     public int getStrength() {
         return strength;
     }
