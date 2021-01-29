@@ -4,6 +4,13 @@ public class Jaeger {
     private String mark;
     private double bounce;
 
+    public Jaeger() {
+        height = 40.5;
+        strength = 760;
+        mark = "Марк-М2";
+        bounce = 20.5;
+    }
+
     public double getBounce() {
         return bounce;
     }

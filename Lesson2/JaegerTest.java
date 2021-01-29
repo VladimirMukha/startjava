@@ -1,6 +1,11 @@
 public class JaegerTest {
     public static void main(String[] args) {
         Jaeger jaegerM4 = new Jaeger();
+
+        System.out.println("Значения из конструктора. - Марка модели: " + jaegerM4.getMark() + " высота модели: "
+                + jaegerM4.getHeight() + " сила: " + jaegerM4.getStrength() + " прыжок: " + jaegerM4.getBounce());
+        System.out.println("--------------------------------------------------------------------");
+
         jaegerM4.setHeight(35.5);
         jaegerM4.setMark("Марк-4");
         jaegerM4.setStrength(1000);
