@@ -28,7 +28,6 @@ public class GuessNumber {
 
             } else if (targetNumber > playerOne.getNumber()) {
                 System.out.println("Выбранное число   игроком " + playerOne.getName() + " : меньше загаданного ");
-
             }
 
             System.out.print(playerTwo.getName() + "  введите число :");
