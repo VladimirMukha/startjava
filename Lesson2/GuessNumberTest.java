@@ -10,19 +10,19 @@ public class GuessNumberTest {
         String nameTwo = scanner.next();
         System.out.println(nameOne + " and " + nameTwo + " Beginning! ");
 
-        GuessNumber guessNumberOne = new GuessNumber(new Player(nameOne), new Player(nameTwo));
-        guessNumberOne.startGame();
+        GuessNumber game = new GuessNumber(new Player(nameOne), new Player(nameTwo));
 
-        String answer = "";
         do {
-            answer = "";
+            String answer = "";
+            game.start();
             while (!answer.equals("да") && !answer.equals("нет")) {
-                System.out.print("Хотите продолжить игру? [да/нет]");
+                System.out.print("Хотите продолжить игру? [да/нет]:");
                 answer = scanner.next();
             }
-            if (answer.equals("да")) {
-                guessNumberOne.startGame();
+            if (answer.equals("нет")) {
+                break;
             }
-        } while (!answer.equals("нет"));
+        } while (true);
     }
 }
+
