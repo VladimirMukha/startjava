@@ -4,46 +4,48 @@ import java.util.Scanner;
 public class GuessNumber {
     public Player playerOne;
     public Player playerTwo;
-    public boolean isPlayerOne = false;
-    public boolean isPlayerTwo = false;
+    Random random = new Random();
+    Scanner scanner = new Scanner(System.in);
 
     public GuessNumber(Player playerOne, Player playerTwo) {
         this.playerOne = playerOne;
         this.playerTwo = playerTwo;
     }
 
-    Random random = new Random();
-    Scanner scanner = new Scanner(System.in);
-
     public void start() {
-        int targetNumber = random.nextInt(101);//если тут делать генерацию , то при продолжении игры число перезаписывается .
-        System.out.print("Первый игрок " + playerOne.getName() + " введите число: ");
-        playerOne.setNumber(scanner.nextInt());
-        if (targetNumber == playerOne.getNumber()) {
-            isPlayerOne = true;
-        }
-        if (targetNumber == playerTwo.getNumber()) {
-            isPlayerTwo = true;
-        }
-        if (targetNumber < playerOne.getNumber()) {
-            System.out.println("Выбранное  число игроком " + playerOne.getName() + " : больше загаданного");
-        } else if (targetNumber > playerOne.getNumber()) {
-            System.out.println("Выбранное число   игроком " + playerOne.getName() + " : меньше загаданного ");
-        }
-        if (isPlayerTwo || isPlayerOne) {
-            System.out.println("Есть победитель");
-            System.out.println(playerOne.getName() + ":" + isPlayerOne);
-            System.out.println(playerTwo.getName() + ":" + isPlayerTwo);
-            System.out.println("Игра окончена!");
-            return;
-        }
+        int targetNumber = random.nextInt(101) + 1;
+        do {
+            System.out.print("Первый игрок " + playerOne.getName() + " введите число: ");
+            playerOne.setNumber(scanner.nextInt());
 
-        System.out.print(playerTwo.getName() + "  введите число :");
-        playerTwo.setNumber(scanner.nextInt());
-        if (targetNumber < playerTwo.getNumber()) {
-            System.out.println("Выбранное число   игроком " + playerTwo.getName() + " : больше загаданного");
-        } else if (targetNumber > playerTwo.getNumber()) {
-            System.out.println("Выбранное  число   игроком " + playerTwo.getName() + " : меньше загаданного");
-        }
+            if (targetNumber == playerOne.getNumber()) {
+                System.out.println("Победил: " + playerOne.getName());
+                break;
+            }
+
+            if (targetNumber < playerOne.getNumber()) {
+                System.out.println("Выбранное  число игроком " + playerOne.getName() + " : больше загаданного");
+
+            } else if (targetNumber > playerOne.getNumber()) {
+                System.out.println("Выбранное число   игроком " + playerOne.getName() + " : меньше загаданного ");
+
+            }
+
+            System.out.print(playerTwo.getName() + "  введите число :");
+            playerTwo.setNumber(scanner.nextInt());
+            if (targetNumber == playerTwo.getNumber()) {
+                System.out.println("Победил: " + playerTwo.getName());
+                break;
+            }
+            if (targetNumber < playerTwo.getNumber()) {
+                System.out.println("Выбранное число   игроком " + playerTwo.getName() + " : больше загаданного");
+
+            } else if (targetNumber > playerTwo.getNumber()) {
+                System.out.println("Выбранное  число   игроком " + playerTwo.getName() + " : меньше загаданного");
+
+            }
+        } while (true);
+
+        System.out.println("Игра окончена!");
     }
 }

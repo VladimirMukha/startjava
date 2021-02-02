@@ -11,18 +11,15 @@ public class GuessNumberTest {
         System.out.println(nameOne + " and " + nameTwo + " Beginning! ");
 
         GuessNumber game = new GuessNumber(new Player(nameOne), new Player(nameTwo));
+        String answer = "";
 
         do {
-            String answer = "";
             game.start();
+            answer = "";// <--ничего на ум не идет как  обойтись без этого((
             while (!answer.equals("да") && !answer.equals("нет")) {
-                System.out.print("Хотите продолжить игру? [да/нет]:");
-                answer = scanner.next();
-            }
-            if (answer.equals("нет")) {
-                break;
-            }
-        } while (true);
+                System.out.print("Хотите продолжить игру? [да/нет]:"); //<-- "Эта надпись должна быть после каждого хода 
+               answer = scanner.next();                                //или в конце игры? а если после каждорго хода то я не понял как ее 
+            }                                                          // можно в клинить в цикл в методе старт с класса GuessNumberTest
+        } while (!answer.equals("нет"));
     }
 }
-
