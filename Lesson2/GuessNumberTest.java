@@ -15,11 +15,10 @@ public class GuessNumberTest {
 
         do {
             game.start();
-            answer = "";// <--ничего на ум не идет как  обойтись без этого((
             while (!answer.equals("да") && !answer.equals("нет")) {
-                System.out.print("Хотите продолжить игру? [да/нет]:"); //<-- "Эта надпись должна быть после каждого хода 
-               answer = scanner.next();                                //или в конце игры? а если после каждорго хода то я не понял как ее 
-            }                                                          // можно в клинить в цикл в методе старт с класса GuessNumberTest
+                System.out.print("Хотите продолжить игру? [да/нет]:"); 
+                answer = scanner.next();
+            }
         } while (!answer.equals("нет"));
     }
 }
