@@ -1,6 +1,7 @@
+package com.startjava.lesson_1.calculator;
 public class Calculator {
     
-    public bouble calculations(double a, char operation, double b ){
+    public double calculations(double a, char operation, double b ){
         double result = 0;
 
         switch(operation){
@@ -13,5 +14,6 @@ public class Calculator {
           case '/': result = a/b;
           break;
         }
+          return result;
     }
 }

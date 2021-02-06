@@ -1,3 +1,5 @@
+package com.startjava.lesson_2_3.robot;
+
 public class Jaeger {
     private double height;
     private int strength;
@@ -44,14 +46,14 @@ public class Jaeger {
     }
 
     public void powerMove() {
-        System.out.println("РњРѕС‰РЅС‹Р№ СЂС‹РІРѕРє!");
+        System.out.println("Мощный рывок!");
     }
 
     public void openFire() {
-        System.out.println("РћС‚РєСЂС‹С‚ РѕРіРѕРЅСЊ!");
+        System.out.println("Открыт огонь!");
     }
 
     public void refueling() {
-        System.out.println("РРґРµС‚ Р·Р°РїСЂР°РІРєР°! 1-2-3 Р—Р°РїСЂР°РІРєР° Р·Р°РІРµСЂС€РµРЅР°!");
+        System.out.println("Идет заправка! 1-2-3 Заправка завершена!");
     }
 }
