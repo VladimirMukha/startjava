@@ -24,10 +24,10 @@ public class GuessNumber {
                 break;
             }
             if (targetNumber < playerOne.getNumber()) {
-                System.out.println("¬ыбранное  число игроком " + playerOne.getName() + " : больше загаданного");
+                System.out.println("¬ыбранное  число игроком " + playerOne.getName() + " : больше загаданного.");
 
             } else if (targetNumber > playerOne.getNumber()) {
-                System.out.println("¬ыбранное число   игроком " + playerOne.getName() + " : меньше загаданного ");
+                System.out.println("¬ыбранное число   игроком " + playerOne.getName() + " : меньше загаданного.");
 
             }
 
@@ -38,10 +38,10 @@ public class GuessNumber {
                 break;
             }
             if (targetNumber < playerTwo.getNumber()) {
-                System.out.println("¬ыбранное число   игроком " + playerTwo.getName() + " : больше загаданного");
+                System.out.println("¬ыбранное число   игроком " + playerTwo.getName() + " : больше загаданного.");
 
             } else if (targetNumber > playerTwo.getNumber()) {
-                System.out.println("¬ыбранное  число   игроком " + playerTwo.getName() + " : меньше загаданного");
+                System.out.println("¬ыбранное  число   игроком " + playerTwo.getName() + " : меньше загаданного.");
             }
         } while (true);
 

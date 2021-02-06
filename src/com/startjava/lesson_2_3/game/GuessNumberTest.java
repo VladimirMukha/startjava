@@ -9,7 +9,7 @@ public class GuessNumberTest {
         String nameOne = scanner.next();
         System.out.print("¬ведите им€ второго игрока: ");
         String nameTwo = scanner.next();
-        System.out.println(nameOne + " and " + nameTwo + " Beginning! ");
+        System.out.println(nameOne + " and " + nameTwo + " Beginning!!");
 
         GuessNumber game = new GuessNumber(new Player(nameOne), new Player(nameTwo));
         String answer = "";

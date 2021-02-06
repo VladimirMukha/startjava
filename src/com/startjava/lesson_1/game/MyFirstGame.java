@@ -10,10 +10,10 @@ public class MyFirstGame {
                 System.out.println("Вы угадали! " + playerNumber);
                 break;
             } else if (playerNumber > targetNumber) {
-                System.out.println("Введенное вами число больше того, что загадал компьютер! " + playerNumber);
+                System.out.println("Введенное вами число больше того, что загадал компьютер!! " + playerNumber);
                 playerNumber--;
             } else if (playerNumber < targetNumber) {
-                System.out.println("Введенное вами число меньше того, что загадал компьютер! " + playerNumber);
+                System.out.println("Введенное вами число меньше того, что загадал компьютер!! " + playerNumber);
                 playerNumber++;
             }
         }

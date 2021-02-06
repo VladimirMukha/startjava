@@ -42,7 +42,7 @@ public class JaegerTest {
         System.out.println("Марка модели: " + jaegerM6.getMark() + " Высота  прыжка: " + jaegerM6.getBounce() +
                 " высота модели " + jaegerM6.getHeight());
 
-        jaegerM6.openFire();
+        
         jaegerM6.powerMove();
         jaegerM6.refueling();
         jaegerM6.setStrength(1400);
