@@ -4,43 +4,43 @@ public class JaegerTest {
     public static void main(String[] args) {
          Jaeger jaegerM4 = new Jaeger(32.5, 500, "Mark7", 100);
 
-        System.out.println("Значения из конструктора. - Марка модели: " + jaegerM4.getMark() + " высота модели: "
-                + jaegerM4.getHeight() + " сила: " + jaegerM4.getStrength() + " прыжок: " + jaegerM4.getBounce());
+        System.out.println("Р—РЅР°С‡РµРЅРёСЏ РёР· РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°. - РњР°СЂРєР° РјРѕРґРµР»Рё: " + jaegerM4.getMark() + " РІС‹СЃРѕС‚Р° РјРѕРґРµР»Рё: "
+                + jaegerM4.getHeight() + " СЃРёР»Р°: " + jaegerM4.getStrength() + " РїСЂС‹Р¶РѕРє: " + jaegerM4.getBounce());
 
         jaegerM4.powerMove();
         jaegerM4.openFire();
 
         System.out.println("---------------------------------------------------------------------");
         jaegerM4.setHeight(35.5);
-        jaegerM4.setMark("Марк-4");
+        jaegerM4.setMark("РњР°СЂРє-4");
         jaegerM4.setStrength(1000);
         jaegerM4.setBounce(100);
 
-        System.out.println("Марка модели: " + jaegerM4.getMark() + " высота модели: " + jaegerM4.getHeight() +
-                " сила: " + jaegerM4.getStrength() + " прыжок: " + jaegerM4.getBounce());
+        System.out.println("РњР°СЂРєР° РјРѕРґРµР»Рё: " + jaegerM4.getMark() + " РІС‹СЃРѕС‚Р° РјРѕРґРµР»Рё: " + jaegerM4.getHeight() +
+                " СЃРёР»Р°: " + jaegerM4.getStrength() + " РїСЂС‹Р¶РѕРє: " + jaegerM4.getBounce());
 
         jaegerM4.openFire();
         jaegerM4.powerMove();
         jaegerM4.setStrength(1300);
         jaegerM4.setBounce(300);
 
-        System.out.println("прыжок: " + jaegerM4.getBounce() + " сила: " + jaegerM4.getStrength());
+        System.out.println("РїСЂС‹Р¶РѕРє: " + jaegerM4.getBounce() + " СЃРёР»Р°: " + jaegerM4.getStrength());
         System.out.println("--------------------------------------------------------------------");
 
        Jaeger jaegerM6 = new Jaeger(50.2, 600, "Mark1", 15.2);
 
-        System.out.println("Значения из конструктора: Марка модели: " + jaegerM6.getMark() +
-                " Высота  прыжка: " + jaegerM6.getBounce() + " высота модели " + jaegerM6.getHeight() +
-                "сила модели :" + jaegerM6.getStrength());
+        System.out.println("Р—РЅР°С‡РµРЅРёСЏ РёР· РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°: РњР°СЂРєР° РјРѕРґРµР»Рё: " + jaegerM6.getMark() +
+                " Р’С‹СЃРѕС‚Р°  РїСЂС‹Р¶РєР°: " + jaegerM6.getBounce() + " РІС‹СЃРѕС‚Р° РјРѕРґРµР»Рё " + jaegerM6.getHeight() +
+                "СЃРёР»Р° РјРѕРґРµР»Рё :" + jaegerM6.getStrength());
         System.out.println("--------------------------------------------------------------------");
 
         jaegerM6.setHeight(39.5);
         jaegerM6.setBounce(120);
         jaegerM6.setStrength(1100);
-        jaegerM6.setMark("Марк-6");
+        jaegerM6.setMark("РњР°СЂРє-6");
 
-        System.out.println("Марка модели: " + jaegerM6.getMark() + " Высота  прыжка: " + jaegerM6.getBounce() +
-                " высота модели " + jaegerM6.getHeight());
+        System.out.println("РњР°СЂРєР° РјРѕРґРµР»Рё: " + jaegerM6.getMark() + " Р’С‹СЃРѕС‚Р°  РїСЂС‹Р¶РєР°: " + jaegerM6.getBounce() +
+                " РІС‹СЃРѕС‚Р° РјРѕРґРµР»Рё " + jaegerM6.getHeight());
 
         
         jaegerM6.powerMove();
@@ -48,6 +48,6 @@ public class JaegerTest {
         jaegerM6.setStrength(1400);
         jaegerM6.setBounce(150);
 
-        System.out.println("Сила: " + jaegerM6.getStrength() + " высота прыжка : " + jaegerM6.getBounce());
+        System.out.println("РЎРёР»Р°: " + jaegerM6.getStrength() + " РІС‹СЃРѕС‚Р° РїСЂС‹Р¶РєР° : " + jaegerM6.getBounce());
     }
 }

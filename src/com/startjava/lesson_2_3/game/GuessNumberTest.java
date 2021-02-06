@@ -5,9 +5,9 @@ public class GuessNumberTest {
     public static void main(String[] args) {
          Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Введите имя первого игрока: ");
+        System.out.print("Р’РІРµРґРёС‚Рµ РёРјСЏ РїРµСЂРІРѕРіРѕ РёРіСЂРѕРєР°: ");
         String nameOne = scanner.next();
-        System.out.print("Введите имя второго игрока: ");
+        System.out.print("Р’РІРµРґРёС‚Рµ РёРјСЏ РІС‚РѕСЂРѕРіРѕ РёРіСЂРѕРєР°: ");
         String nameTwo = scanner.next();
         System.out.println(nameOne + " and " + nameTwo + " Beginning!!");
 
@@ -16,11 +16,11 @@ public class GuessNumberTest {
 
         do {
             game.start();
-            if (!answer.equals("да") && !answer.equals("нет")) {
-                System.out.print("Хотите продолжить игру? [да/нет]:");
+            if (!answer.equals("РґР°") && !answer.equals("РЅРµС‚")) {
+                System.out.print("РҐРѕС‚РёС‚Рµ РїСЂРѕРґРѕР»Р¶РёС‚СЊ РёРіСЂСѓ? [РґР°/РЅРµС‚]:");
                 answer = scanner.next();
             }
-        } while (!answer.equals("нет"));
+        } while (!answer.equals("РЅРµС‚"));
     }
 }
 

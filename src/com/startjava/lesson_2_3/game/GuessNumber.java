@@ -16,36 +16,36 @@ public class GuessNumber {
      public void start() {
         int targetNumber = random.nextInt(101) + 1;
         do {
-            System.out.print("Первый игрок " + playerOne.getName() + " введите число: ");
+            System.out.print("РџРµСЂРІС‹Р№ РёРіСЂРѕРє " + playerOne.getName() + " РІРІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
             playerOne.setNumber(scanner.nextInt());
 
             if (targetNumber == playerOne.getNumber()) {
-                System.out.println("Победил: " + playerOne.getName());
+                System.out.println("РџРѕР±РµРґРёР»: " + playerOne.getName());
                 break;
             }
             if (targetNumber < playerOne.getNumber()) {
-                System.out.println("Выбранное  число игроком " + playerOne.getName() + " : больше загаданного.");
+                System.out.println("Р’С‹Р±СЂР°РЅРЅРѕРµ  С‡РёСЃР»Рѕ РёРіСЂРѕРєРѕРј " + playerOne.getName() + " : Р±РѕР»СЊС€Рµ Р·Р°РіР°РґР°РЅРЅРѕРіРѕ.");
 
             } else if (targetNumber > playerOne.getNumber()) {
-                System.out.println("Выбранное число   игроком " + playerOne.getName() + " : меньше загаданного.");
+                System.out.println("Р’С‹Р±СЂР°РЅРЅРѕРµ С‡РёСЃР»Рѕ   РёРіСЂРѕРєРѕРј " + playerOne.getName() + " : РјРµРЅСЊС€Рµ Р·Р°РіР°РґР°РЅРЅРѕРіРѕ.");
 
             }
 
-            System.out.print(playerTwo.getName() + "  введите число :");
+            System.out.print(playerTwo.getName() + "  РІРІРµРґРёС‚Рµ С‡РёСЃР»Рѕ :");
             playerTwo.setNumber(scanner.nextInt());
             if (targetNumber == playerTwo.getNumber()) {
-                System.out.println("Победил: " + playerTwo.getName());
+                System.out.println("РџРѕР±РµРґРёР»: " + playerTwo.getName());
                 break;
             }
             if (targetNumber < playerTwo.getNumber()) {
-                System.out.println("Выбранное число   игроком " + playerTwo.getName() + " : больше загаданного.");
+                System.out.println("Р’С‹Р±СЂР°РЅРЅРѕРµ С‡РёСЃР»Рѕ   РёРіСЂРѕРєРѕРј " + playerTwo.getName() + " : Р±РѕР»СЊС€Рµ Р·Р°РіР°РґР°РЅРЅРѕРіРѕ.");
 
             } else if (targetNumber > playerTwo.getNumber()) {
-                System.out.println("Выбранное  число   игроком " + playerTwo.getName() + " : меньше загаданного.");
+                System.out.println("Р’С‹Р±СЂР°РЅРЅРѕРµ  С‡РёСЃР»Рѕ   РёРіСЂРѕРєРѕРј " + playerTwo.getName() + " : РјРµРЅСЊС€Рµ Р·Р°РіР°РґР°РЅРЅРѕРіРѕ.");
             }
         } while (true);
 
-        System.out.println("Игра окончена!");
+        System.out.println("РРіСЂР° РѕРєРѕРЅС‡РµРЅР°!");
     }
 }
 

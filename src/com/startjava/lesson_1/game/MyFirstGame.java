@@ -7,13 +7,13 @@ public class MyFirstGame {
         
         for (int i = 0; i <= 100; i++) {
             if (playerNumber == targetNumber) {
-                System.out.println("Вы угадали! " + playerNumber);
+                System.out.println("Р’С‹ СѓРіР°РґР°Р»Рё! " + playerNumber);
                 break;
             } else if (playerNumber > targetNumber) {
-                System.out.println("Введенное вами число больше того, что загадал компьютер!! " + playerNumber);
+                System.out.println("Р’РІРµРґРµРЅРЅРѕРµ РІР°РјРё С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ С‚РѕРіРѕ, С‡С‚Рѕ Р·Р°РіР°РґР°Р» РєРѕРјРїСЊСЋС‚РµСЂ!! " + playerNumber);
                 playerNumber--;
             } else if (playerNumber < targetNumber) {
-                System.out.println("Введенное вами число меньше того, что загадал компьютер!! " + playerNumber);
+                System.out.println("Р’РІРµРґРµРЅРЅРѕРµ РІР°РјРё С‡РёСЃР»Рѕ РјРµРЅСЊС€Рµ С‚РѕРіРѕ, С‡С‚Рѕ Р·Р°РіР°РґР°Р» РєРѕРјРїСЊСЋС‚РµСЂ!! " + playerNumber);
                 playerNumber++;
             }
         }

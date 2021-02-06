@@ -46,14 +46,14 @@ public class Jaeger {
     }
 
     public void powerMove() {
-        System.out.println("Мощный рывок!!");
+        System.out.println("РњРѕС‰РЅС‹Р№ СЂС‹РІРѕРє!!");
     }
 
     public void openFire() {
-        System.out.println("Открыт огонь!!");
+        System.out.println("РћС‚РєСЂС‹С‚ РѕРіРѕРЅСЊ!!");
     }
 
     public void refueling() {
-        System.out.println("Идет заправка! 1-2-3 Заправка завершена!");
+        System.out.println("РРґРµС‚ Р·Р°РїСЂР°РІРєР°! 1-2-3 Р—Р°РїСЂР°РІРєР° Р·Р°РІРµСЂС€РµРЅР°!");
     }
 }
