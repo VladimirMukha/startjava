@@ -1,6 +1,6 @@
 package com.startjava.lesson_1.calculator;
+
 public class Calculator {
-    
     public double calculations(double a, char operation, double b ){
         double result = 0;
 
