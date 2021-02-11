@@ -1,9 +1,16 @@
 package com.startjava.lesson_4.calculator;
 
-public class Calculator {
-    public double calculate(double a, char operation, double b) {
+import java.util.Scanner;
 
-        switch (operation) {
+public class Calculator {
+
+    public double calculate(String string) {
+        String[] expression = string.split(" ");
+        double a = Double.parseDouble(expression[0]);
+        char sign = expression[1].charAt(0);
+        double b = Double.parseDouble(expression[2]);
+
+        switch (sign) {
             case '+':
                 return Math.addExact((int) a, (int) b);
             case '-':
@@ -17,10 +24,10 @@ public class Calculator {
             case '%':
                 return Math.floorMod((int) a, (int) b);
             default:
-                System.out.print("Повторите ввод: ");
+                System.out.print("Повторите ввод!");
                 break;
         }
-        return -1;
+        return 0;
     }
 }
 
