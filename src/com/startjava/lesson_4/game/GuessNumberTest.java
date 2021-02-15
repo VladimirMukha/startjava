@@ -17,6 +17,7 @@ public class GuessNumberTest {
         String answer = "";
 
         while (!answer.equals("нет")) {
+
             game.start();
 
             do {
