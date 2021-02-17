@@ -75,7 +75,7 @@ public class GuessNumber {
         }
     }
 
-    public static void lessOrMore(Player player, int targetNumber, int k) {
+    private void lessOrMore(Player player, int targetNumber, int k) {
         if (targetNumber < player.getEnteredNumbers()[k]) {
             System.out.println("Выбранное число   игроком " + player.getName() +
                     " : больше загаданного.");
@@ -85,7 +85,7 @@ public class GuessNumber {
         }
     }
 
-    public static void getShowWinner(Player player, int targetNumber, int count) {
+    private void getShowWinner(Player player, int targetNumber, int count) {
         System.out.println("Игрок " + player.getName() + " угадал число  " + targetNumber +
                 " с " + count + " попытки ");
         System.out.println("ранее введенные числа игроком :");
