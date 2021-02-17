@@ -1,6 +1,5 @@
 package com.startjava.lesson_4.game;
 
-
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
@@ -24,69 +23,71 @@ public class GuessNumber {
         for (int k = 0; k < 10; k++) {
             System.out.print(playerOne.getName() + " введите число: ");
 
-            playerOne.setEnteredNumber(scanner.nextInt());
+            playerOne.setEnteredNumbers(scanner.nextInt());
 
-            if (playerOne.getEnteredNumber()[k] != 0) {
+            if (playerOne.getEnteredNumbers()[k] != 0) {
                 ++countOne;
             }
+            if (targetNumber == playerOne.getEnteredNumbers()[k]) {
 
-            if (targetNumber == playerOne.getEnteredNumber()[k]) {
-                System.out.println("Игрок " + playerOne.getName() + " угадал число  " + targetNumber +
-                        " с " + countOne + " попытки ");
-                System.out.println("ранее введенные числа игроком :" +
-                        Arrays.toString(Arrays.copyOf(playerOne.getEnteredNumber(), countTwo)));
-                Arrays.fill(playerOne.getEnteredNumber(), 0);
+                getShowWinner(playerOne, targetNumber, countOne);
+
+                System.out.println(Arrays.toString(Arrays.copyOf(playerOne.getEnteredNumbers(), countOne)));
+                Arrays.fill(playerOne.getEnteredNumbers(), 0);
                 playerOne.setIndex(0);
                 playerTwo.setIndex(0);
                 break;
             }
 
-            if (targetNumber < playerOne.getEnteredNumber()[k]) {
-                System.out.println("Выбранное  число игроком " + playerOne.getName() + " : больше загаданного.");
-            } else if (targetNumber > playerOne.getEnteredNumber()[k]) {
-                System.out.println("Выбранное число   игроком " + playerOne.getName() + " : меньше загаданного.");
-            }
+            lessOrMore(playerOne, targetNumber, k);
 
             System.out.print(playerTwo.getName() + "  введите число :");
-            playerTwo.setEnteredNumber(scanner.nextInt());
+            playerTwo.setEnteredNumbers(scanner.nextInt());
 
-            if (playerTwo.getEnteredNumber()[k] != 0) {
+            if (playerTwo.getEnteredNumbers()[k] != 0) {
                 countTwo++;
             }
-            if (targetNumber == playerTwo.getEnteredNumber()[k]) {
-                System.out.println("Игрок " + playerTwo.getName() + " угадал число  " + targetNumber +
-                        " с " + countTwo + " попытки ");
-                System.out.println("ранее введенные числа игроком :" +
-                        Arrays.toString(Arrays.copyOf(playerOne.getEnteredNumber(), countTwo)));
-                Arrays.fill(playerTwo.getEnteredNumber(), 0);
+            if (targetNumber == playerTwo.getEnteredNumbers()[k]) {
+
+                getShowWinner(playerTwo, targetNumber, countTwo);
+
+                System.out.println(Arrays.toString(Arrays.copyOf(playerTwo.getEnteredNumbers(), countTwo)));
+                Arrays.fill(playerTwo.getEnteredNumbers(), 0);
                 playerTwo.setIndex(0);
                 playerOne.setIndex(0);
                 break;
             }
-            if (targetNumber < playerTwo.getEnteredNumber()[k]) {
-                System.out.println("Выбранное число   игроком " + playerTwo.getName() + " : больше загаданного.");
 
-            } else if (targetNumber > playerTwo.getEnteredNumber()[k]) {
-                System.out.println("Выбранное  число   игроком " + playerTwo.getName() + " : меньше загаданного.");
-            }
+            lessOrMore(playerTwo, targetNumber, k);
+
             if (k == 9) {
-
                 System.out.println("У " + playerOne.getName() + " закончились попытки.");
                 System.out.println("У " + playerTwo.getName() + " закончились попытки.");
                 System.out.println("-----------------------------------------------------");
 
-                System.out.println("Игрок " + playerOne.getName() + Arrays.toString(playerOne.getEnteredNumber()) + "\n");
-                System.out.println("Игрок " + playerTwo.getName() + Arrays.toString(playerTwo.getEnteredNumber()));
-                Arrays.fill(playerOne.getEnteredNumber(), 0);
-                Arrays.fill(playerTwo.getEnteredNumber(), 0);
+                System.out.println("Игрок " + playerOne.getName() + Arrays.toString(playerOne.getEnteredNumbers()) + "\n");
+                System.out.println("Игрок " + playerTwo.getName() + Arrays.toString(playerTwo.getEnteredNumbers()));
+                Arrays.fill(playerOne.getEnteredNumbers(), 0);
+                Arrays.fill(playerTwo.getEnteredNumbers(), 0);
                 playerOne.setIndex(0);
                 playerTwo.setIndex(0);
             }
         }
     }
+
+    public static void lessOrMore(Player player, int targetNumber, int k) {
+        if (targetNumber < player.getEnteredNumbers()[k]) {
+            System.out.println("Выбранное число   игроком " + player.getName() +
+                    " : больше загаданного.");
+        } else if (targetNumber > player.getEnteredNumbers()[k]) {
+            System.out.println("Выбранное  число   игроком " + player.getName() +
+                    " : меньше загаданного.");
+        }
+    }
+
+    public static void getShowWinner(Player player, int targetNumber, int count) {
+        System.out.println("Игрок " + player.getName() + " угадал число  " + targetNumber +
+                " с " + count + " попытки ");
+        System.out.println("ранее введенные числа игроком :");
+    }
 }
-
-
-
-
-
