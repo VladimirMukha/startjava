@@ -21,7 +21,7 @@ public class GuessNumber {
         int countTwo = 0;
 
         for (int k = 0; k < 10; k++) {
-            countOne = getCount(playerOne,countOne, k);
+            countOne = getCount(playerOne, countOne, k);
             if (targetNumber == playerOne.getEnteredNumbers()[k]) {
 
                 getShowWinner(playerOne, targetNumber, countOne);
@@ -35,7 +35,7 @@ public class GuessNumber {
 
             numberCheck(playerOne, targetNumber, k);
 
-            countTwo = getCount(playerTwo,countTwo, k);
+            countTwo = getCount(playerTwo, countTwo, k);
             if (targetNumber == playerTwo.getEnteredNumbers()[k]) {
 
                 getShowWinner(playerTwo, targetNumber, countTwo);
@@ -64,7 +64,7 @@ public class GuessNumber {
         }
     }
 
-    private int getCount(Player player,int count, int k) {
+    private int getCount(Player player, int count, int k) {
         System.out.print(player.getName() + " введите число: ");
 
         player.setEnteredNumber(scanner.nextInt());
