@@ -9,6 +9,7 @@ public class GuessNumber {
     private Player playerTwo;
     private Random random = new Random();
     private Scanner scanner = new Scanner(System.in);
+    private int targetNumber;
 
     public GuessNumber(Player playerOne, Player playerTwo) {
         this.playerOne = playerOne;
@@ -16,46 +17,31 @@ public class GuessNumber {
     }
 
     public void start() {
-        int targetNumber = random.nextInt(101) + 1;
-        int countOne = 0;
-        int countTwo = 0;
+        targetNumber = random.nextInt(101) + 1;
 
-        for (int k = 0; k < 10; k++) {
-            countOne = getCount(playerOne, countOne, k);
-            if (targetNumber == playerOne.getEnteredNumbers()[k]) {
-
-                getShowWinner(playerOne, targetNumber, countOne);
-                getNumbers(playerOne);
-
+        for (int i = 0; i < 10; i++) {
+            if (checkNumberAndWinner(playerOne, i)) {
+                getShowEnteredNumbers(playerOne);
                 Arrays.fill(playerOne.getEnteredNumbers(), 0);
                 playerOne.setIndex(0);
                 playerTwo.setIndex(0);
                 break;
             }
-
-            numberCheck(playerOne, targetNumber, k);
-
-            countTwo = getCount(playerTwo, countTwo, k);
-            if (targetNumber == playerTwo.getEnteredNumbers()[k]) {
-
-                getShowWinner(playerTwo, targetNumber, countTwo);
-
-                getNumbers(playerTwo);
+            if (checkNumberAndWinner(playerTwo, i)) {
+                getShowEnteredNumbers(playerTwo);
                 Arrays.fill(playerTwo.getEnteredNumbers(), 0);
                 playerTwo.setIndex(0);
                 playerOne.setIndex(0);
                 break;
             }
 
-            numberCheck(playerTwo, targetNumber, k);
-
-            if (k == 9) {
+            if (i == 9) {
                 System.out.println("У " + playerOne.getName() + " закончились попытки.");
                 System.out.println("У " + playerTwo.getName() + " закончились попытки.");
-                System.out.println("-----------------------------------------------");
+                System.out.println("-------------------------------");
 
-                getNumbers(playerOne);
-                getNumbers(playerTwo);
+                getShowEnteredNumbers(playerOne);
+                getShowEnteredNumbers(playerTwo);
                 Arrays.fill(playerOne.getEnteredNumbers(), 0);
                 Arrays.fill(playerTwo.getEnteredNumbers(), 0);
                 playerOne.setIndex(0);
@@ -64,37 +50,33 @@ public class GuessNumber {
         }
     }
 
-    private int getCount(Player player, int count, int k) {
+    private boolean checkNumberAndWinner(Player player, int i) {
         System.out.print(player.getName() + " введите число: ");
-
         player.setEnteredNumber(scanner.nextInt());
+        int number = player.getEnteredNumbers()[i];
 
-        if (player.getEnteredNumbers()[k] != 0) {
-            ++count;
+        if (number == targetNumber) {
+            System.out.println("Игрок " + player.getName() + " угадал число  " + targetNumber +
+                    " с " + player.getIndex() + " попытки ");
+            System.out.print("ранее введенные числа игроком :");
+            return true;
         }
-        return count;
-    }
-
-    private void numberCheck(Player player, int targetNumber, int k) {
-        if (targetNumber < player.getEnteredNumbers()[k]) {
+        if (targetNumber < number) {
             System.out.println("Выбранное число   игроком " + player.getName() +
                     " : больше загаданного.");
-        } else if (targetNumber > player.getEnteredNumbers()[k]) {
+        } else if (targetNumber > number) {
             System.out.println("Выбранное  число   игроком " + player.getName() +
                     " : меньше загаданного.");
         }
+        return false;
     }
 
-    private void getShowWinner(Player player, int targetNumber, int count) {
-        System.out.println("Игрок " + player.getName() + " угадал число  " + targetNumber +
-                " с " + count + " попытки ");
-        System.out.print("ранее введенные числа игроком :");
-    }
+    private void getShowEnteredNumbers(Player player) {
+        System.out.print(player.getName() + " ");
 
-    private void getNumbers(Player player) {
-        for (int numbers : player.getEnteredNumbers()) {
-            System.out.print(numbers + " ");
+        for (int number : player.getEnteredNumbers()) {
+            System.out.print(number + " ");
         }
-        System.out.println(player.getName());
+        System.out.println();
     }
 }
