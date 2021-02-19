@@ -55,7 +55,6 @@ public class GuessNumber {
         }
         System.out.println(number > targetNumber ? "Выбранное число   игроком " + player.getName() +
                 " : больше загаданного." : "Выбранное  число   игроком " + player.getName() + " меньше загаданного.");
-
         return false;
     }
 
