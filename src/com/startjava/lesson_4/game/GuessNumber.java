@@ -37,8 +37,6 @@ public class GuessNumber {
                 System.out.println("У " + playerTwo.getName() + " закончились попытки.");
                 showEnteredNumbers(playerTwo);
                 System.out.println("-----------------------------");
-
-
             }
         }
     }
@@ -55,7 +53,6 @@ public class GuessNumber {
                     " с " + player.getAttempts() + " попытки ");
             return true;
         }
-
         System.out.println(number > targetNumber ? "Выбранное число   игроком " + player.getName() +
                 " : больше загаданного." : "Выбранное  число   игроком " + player.getName() + " меньше загаданного.");
 
