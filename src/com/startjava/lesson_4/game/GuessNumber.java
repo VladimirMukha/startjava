@@ -23,15 +23,12 @@ public class GuessNumber {
 
         for (int i = 0; i < 10; i++) {
             inputNumber(playerOne);
-
             if (checkNumber(playerOne, i)) {
-
                 break;
             }
 
             inputNumber(playerTwo);
             if (checkNumber(playerTwo, i)) {
-
                 break;
             }
             if (i == 9) {
@@ -43,7 +40,6 @@ public class GuessNumber {
 
 
             }
-
         }
     }
 
