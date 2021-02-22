@@ -1,6 +1,5 @@
 package com.startjava.lesson_4.game;
 
-import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -18,8 +17,9 @@ public class GuessNumber {
 
     public void start() {
         targetNumber = random.nextInt(101) + 1;
-        restart(playerOne);
-        restart(playerTwo);
+
+        playerOne.reset();
+        playerTwo.reset();
 
         for (int i = 0; i < 10; i++) {
             inputNumber(playerOne);
@@ -33,17 +33,17 @@ public class GuessNumber {
             }
             if (i == 9) {
                 System.out.println("У " + playerOne.getName() + " закончились попытки.");
-                showEnteredNumbers(playerOne);
                 System.out.println("У " + playerTwo.getName() + " закончились попытки.");
-                showEnteredNumbers(playerTwo);
                 System.out.println("-----------------------------");
             }
         }
+        showEnteredNumbers(playerOne);
+        showEnteredNumbers(playerTwo);
     }
 
-    private void restart(Player player) {
-        Arrays.fill(player.getEnteredNumbers(), 0);
-        player.setAttempt(0);
+    private void inputNumber(Player player) {
+        System.out.print(player.getName() + " Введите число :");
+        player.setEnteredNumber(scanner.nextInt());
     }
 
     private boolean checkNumber(Player player, int i) {
@@ -53,14 +53,9 @@ public class GuessNumber {
                     " с " + player.getAttempts() + " попытки ");
             return true;
         }
-        System.out.println(number > targetNumber ? "Выбранное число   игроком " + player.getName() +
-                " : больше загаданного." : "Выбранное  число   игроком " + player.getName() + " меньше загаданного.");
+        System.out.println(String.format(number > targetNumber ? "%s  %s больше %s " : " %s  %s " +
+                " меньше %s", "Выбранное число игроком", player.getName(), "загаданного."));
         return false;
-    }
-
-    private void inputNumber(Player player) {
-        System.out.print(player.getName() + " Введите число :");
-        player.setEnteredNumber(scanner.nextInt());
     }
 
     private void showEnteredNumbers(Player player) {

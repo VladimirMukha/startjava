@@ -32,4 +32,9 @@ public class Player {
         enteredNumbers[attempt] = enteredNumber;
         attempt++;
     }
+
+    public void reset() {
+        Arrays.fill(enteredNumbers, 0, getAttempts(), 0);
+        setAttempt(0);
+    }
 }
